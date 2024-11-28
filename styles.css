@@ -1,0 +1,214 @@
+/* Cores */
+:root {
+    --cinza-escuro: #595859;
+    --azul-cinza: #64798C;
+    --cinza-claro: #F2F2F2;
+    --cinza-medio: #D9D9D9;
+    --preto: #262626;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cinza-escuro);
+    background-color: var(--cinza-claro);
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background-color: var(--cinza-escuro);
+    color: var(--cinza-claro);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--cinza-claro);
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION */
+#hero {
+    position: relative;
+    background: url(imagens/fundo-violao.jpg) no-repeat center center;
+    background-size: cover;
+    height: 300px; /* Ajustado para telas menores */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cinza-claro);
+    text-align: center;
+    padding: 1rem;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 38, 38, 0.7);
+    backdrop-filter: blur(6px); /* Desfoque mais leve */
+    z-index: 1;
+}
+
+#hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+    z-index: 2;
+    position: relative;
+}
+
+#hero p {
+    font-size: 1rem;
+    z-index: 2;
+    margin-bottom: 0.9rem;
+    position: relative;
+}
+
+#hero .cta {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 100px;
+    background-color: var(--cinza-medio);
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+}
+
+#hero .cta:hover {
+    background-color: #00d757;
+}
+
+/* SEÇÕES */
+section {
+    padding: 1rem;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--preto);
+    color: var(--cinza-medio);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+/* MEDIA QUERY: Telas entre 361px e 720px */
+@media (min-width: 361px) and (max-width: 720px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #hero {
+        height: 400px; /* Hero mais alto para telas maiores */
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    #hero .cta {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 721px) {
+    header h1 {
+        font-size: 2.5rem; /* Título maior para desktops */
+    }
+
+    header nav ul {
+        gap: 2rem; /* Mais espaço entre os links */
+    }
+
+    header nav ul li a {
+        font-size: 1.2rem; /* Links maiores */
+    }
+
+    #hero {
+        height: 500px; /* Hero mais alto para desktops */
+    }
+
+    #hero h2 {
+        font-size: 3rem; /* Título destacado */
+    }
+
+    #hero p {
+        font-size: 1.5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    #hero .cta {
+        padding: 1rem 2.5rem; /* Botão mais espaçoso */
+        font-size: 1.3rem;
+    }
+
+    section h2 {
+        font-size: 2.5rem; /* Títulos maiores nas seções */
+    }
+
+    section p {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 1rem; /* Rodapé com texto maior */
+    }
+}
